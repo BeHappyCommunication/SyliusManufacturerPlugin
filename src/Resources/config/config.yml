@@ -1,0 +1,4 @@
+imports:
+    - { resource: '@BeHappySyliusManufacturerPlugin/Resources/config/resources.yml' }
+    - { resource: '@BeHappySyliusManufacturerPlugin/Resources/config/services.yml' }
+    - { resource: '@BeHappySyliusManufacturerPlugin/Resources/config/grids/grids.yml' }

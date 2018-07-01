@@ -1,0 +1,2 @@
+behappy_manufacturer_admin_manufacturer:
+    resource: admin/manufacturer.yml

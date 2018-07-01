@@ -1,0 +1,10 @@
+BeHappy\SyliusManufacturerPlugin\Entity\Manufacturer:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: code
+    properties:
+        code:
+            - NotBlank: ~
+        images:
+            - Valid: ~
+        translations:
+            - Valid: ~

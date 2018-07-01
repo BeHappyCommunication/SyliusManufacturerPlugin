@@ -1,0 +1,7 @@
+BeHappy\SyliusManufacturerPlugin\Entity\Product:
+    type: mappedSuperclass
+    table: sylius_product
+    manyToOne:
+        manufacturer:
+            targetEntity: BeHappy\SyliusManufacturerPlugin\Entity\Manufacturer
+            inversedBy: products

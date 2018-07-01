@@ -1,0 +1,15 @@
+behappy_manufacturer_admin_manufacturer:
+    resource: |
+        alias: behappy_manufacturer.manufacturer
+        section: admin
+        templates: SyliusAdminBundle:Crud
+        redirect: update
+        grid: behappy_manufacturer_admin_manufacturer
+        vars:
+            all:
+                subheader: behappy_manufacturer.ui.manufacturer
+                templates:
+                    form: BeHappySyliusManufacturerPlugin:Manufacturer:_form.html.twig
+            index:
+                icon: industry
+    type: sylius.resource

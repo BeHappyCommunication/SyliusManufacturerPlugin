@@ -1,0 +1,19 @@
+BeHappy\SyliusManufacturerPlugin\Entity\ManufacturerTranslation:
+    type: mappedSuperclass
+    table: behappy_manufacturer_translation
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 1024
+            nullable: true

@@ -1,0 +1,5 @@
+services:
+    behappy_manufacturer.listener.admin.menu_builder:
+        class: BeHappy\SyliusManufacturerPlugin\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addManufacturerMenuItem }

@@ -1,0 +1,42 @@
+BeHappy\SyliusManufacturerPlugin\Entity\Manufacturer:
+    type: mappedSuperclass
+    table: behappy_manufacturer
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            generator:
+                strategy: AUTO
+    fields:
+        code:
+            type: string
+            unique: true
+            nullable: false
+            length: 64
+        enabled:
+            type: boolean
+        archivedAt:
+            type: datetime
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            nullable: true
+            gedmo:
+                timestampable:
+                    on: update
+    oneToMany:
+        products:
+            targetEntity: BeHappy\SyliusManufacturerPlugin\Entity\Product
+            mappedBy: manufacturer
+        images:
+            targetEntity: BeHappy\SyliusManufacturerPlugin\Entity\ManufacturerImage
+            mappedBy: owner
+            orphanRemoval: true
+            cascade: [ ALL ]

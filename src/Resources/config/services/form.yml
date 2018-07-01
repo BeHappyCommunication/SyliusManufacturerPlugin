@@ -1,0 +1,26 @@
+services:
+    behappy_manufacturer.manufacturer.form.type:
+        class: BeHappy\SyliusManufacturerPlugin\Form\Type\ManufacturerType
+        tags:
+            - { name: form.type }
+        arguments:
+            - '%behappy_manufacturer.model.manufacturer.class%'
+
+    behappy_manufacturer.manufacturer_translation.form.type:
+        class: BeHappy\SyliusManufacturerPlugin\Form\Type\ManufacturerTranslationType
+        tags:
+            - { name: form.type }
+        arguments:
+            - '%behappy_manufacturer.model.manufacturer_translation.class%'
+
+    behappy_manufacturer.manufacturer_image.form.type:
+        class: BeHappy\SyliusManufacturerPlugin\Form\Type\ManufacturerImageType
+        tags:
+            - { name: form.type }
+        arguments:
+            - '%behappy_manufacturer.model.manufacturer_image.class%'
+
+    behappy_manufacturer.form.extension.type.product:
+        class: BeHappy\SyliusManufacturerPlugin\Form\Extension\ProductTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductType, priority: -5 }

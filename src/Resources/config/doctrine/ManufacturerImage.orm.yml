@@ -1,0 +1,12 @@
+BeHappy\SyliusManufacturerPlugin\Entity\ManufacturerImage:
+    type: entity
+    table: behappy_manufacturer_image
+    manyToOne:
+        owner:
+            targetEntity: BeHappy\SyliusManufacturerPlugin\Entity\Manufacturer
+            inversedBy: images
+            joinColumn:
+                name: owner_id
+                referencedColumnName: id
+                onDelete: CASCADE
+                nullable: false

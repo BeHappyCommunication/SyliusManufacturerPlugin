@@ -1,0 +1,27 @@
+services:
+    behappy_manufacturer.block_event_listener.admin.product_form.tab.tab_associations:
+        class: Sylius\Bundle\UiBundle\Block\BlockEventListener
+        arguments:
+            - '@@BeHappySyliusManufacturerPlugin/File/Form/_manufacturer.html.twig'
+        tags:
+            - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.product.create.tab_associations, method: onBlockEvent }
+            - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.product.update.tab_associations, method: onBlockEvent }
+
+    behappy_manufacturer.listener.images_upload:
+        class: Sylius\Bundle\CoreBundle\EventListener\ImagesUploadListener
+        parent: sylius.listener.images_upload
+        autowire: true
+        autoconfigure: false
+        public: false
+        tags:
+            - { name: kernel.event_listener, event: behappy_manufacturer.manufacturer.pre_create, method: uploadImages }
+            - { name: kernel.event_listener, event: behappy_manufacturer.manufacturer.pre_update, method: uploadImages }
+
+#    behappy_manufacturer.listener.images_remove:
+#        class: Sylius\Bundle\CoreBundle\EventListener\ImagesRemoveListener
+#        parent: sylius.listener.images_upload
+#        autowire: true
+#        autoconfigure: false
+#        public: false
+#        tags:
+#            - { name: kernel.event_listener, event: sylius.manufacturer.postRemove, lazy: true }

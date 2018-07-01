@@ -1,0 +1,4 @@
+BeHappy\SyliusManufacturerPlugin\Entity\ManufacturerTranslation:
+    properties:
+        name:
+            - NotBlank: ~

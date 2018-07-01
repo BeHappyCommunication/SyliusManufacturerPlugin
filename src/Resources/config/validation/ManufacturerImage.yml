@@ -1,0 +1,16 @@
+BeHappy\SyliusManufacturerPlugin\Entity\ManufacturerImage:
+    properties:
+        file:
+            - Image:
+                groups: [ sylius ]
+                maxSize: 10240000
+                maxHeight: 1000
+                maxWidth: 1000
+                mimeTypes:
+                    - 'image/png'
+                    - 'image/jpg'
+                    - 'image/jpeg'
+                    - 'image/gif'
+                mimeTypesMessage: 'This file format is not allowed. Please use PNG, JPG ou GIF files.'
+                minHeight: 100
+                minWidth: 100

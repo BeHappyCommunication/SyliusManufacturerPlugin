@@ -1,0 +1,25 @@
+{% from '@SyliusAdmin/Macro/translationForm.html.twig' import translationForm %}
+
+<div class="ui stackable grid two column">
+    {{ form_errors(form) }}
+    <div class="column">
+        <div class="ui segment">
+            <div class="two fields">
+                {{ form_row(form.code) }}
+                <div class="field">
+                    {{ form_label(form.enabled) }}
+                    <div class="ui toggle checkbox">
+                        {{ form_widget(form.enabled) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include '@BeHappySyliusManufacturerPlugin/Manufacturer/_media.html.twig' %}
+
+    </div>
+    <div class="column">
+        {{ translationForm(form.translations) }}
+    </div>
+</div>
+
+

@@ -1,0 +1,30 @@
+sylius_grid:
+    grids:
+        behappy_manufacturer_admin_manufacturer:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: '%behappy_manufacturer.model.manufacturer.class%'
+            fields:
+                code:
+                    type: string
+                    label: behappy_manufacturer.ui.code
+                    sortable: code
+                name:
+                    type: string
+                    label: behappy_manufacturer.ui.name
+                    sortable: translation.name
+                enabled:
+                    type: twig
+                    label: behappy_manufacturer.ui.enabled
+                    options:
+                        template: '@SyliusUi/Grid/Field/enabled.html.twig'
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete

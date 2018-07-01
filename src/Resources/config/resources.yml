@@ -1,0 +1,21 @@
+sylius_resource:
+    resources:
+        behappy_manufacturer.manufacturer:
+            driver: doctrine/orm
+            classes:
+                model: BeHappy\SyliusManufacturerPlugin\Entity\Manufacturer
+                form: BeHappy\SyliusManufacturerPlugin\Form\Type\ManufacturerType
+            translation:
+                classes:
+                    model: BeHappy\SyliusManufacturerPlugin\Entity\ManufacturerTranslation
+                    form: BeHappy\SyliusManufacturerPlugin\Form\Type\ManufacturerTranslationType
+        behappy_manufacturer.manufacturer_image:
+            classes:
+                model: BeHappy\SyliusManufacturerPlugin\Entity\ManufacturerImage
+                form: BeHappy\SyliusManufacturerPlugin\Form\Type\ManufacturerImageType
+
+sylius_product:
+    resources:
+        product:
+            classes:
+                model: BeHappy\SyliusManufacturerPlugin\Entity\Product

@@ -1,0 +1,18 @@
+behappy_manufacturer:
+    ui:
+        new_manufacturer: 'Créer un fabricant'
+        edit_manufacturer: 'Modifier le fabricant'
+        manufacturers: 'Fabricants'
+        manufacturer: 'Fabricant'
+        menu:
+            manufacturer: 'Fabricants'
+        code: 'Code'
+        name: 'Nom'
+        enabled: 'Activé'
+    form:
+        code: 'Code'
+        enabled: 'Activé'
+        product_manufacturer: 'Fabricant'
+        translatable:
+            name: 'Nom'
+            description: 'Description'

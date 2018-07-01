@@ -1,0 +1,4 @@
+imports:
+    - { resource: '@BeHappySyliusManufacturerPlugin/Resources/config/services/event_listener.yml' }
+    - { resource: '@BeHappySyliusManufacturerPlugin/Resources/config/services/form.yml' }
+    - { resource: '@BeHappySyliusManufacturerPlugin/Resources/config/services/menu.yml' }
