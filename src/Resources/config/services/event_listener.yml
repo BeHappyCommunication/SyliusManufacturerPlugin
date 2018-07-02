@@ -2,7 +2,7 @@ services:
     behappy_manufacturer.block_event_listener.admin.product_form.tab.tab_associations:
         class: Sylius\Bundle\UiBundle\Block\BlockEventListener
         arguments:
-            - '@@BeHappySyliusManufacturerPlugin/File/Form/_manufacturer.html.twig'
+            - '@@BeHappySyliusManufacturerPlugin/Product/Form/_manufacturer.html.twig'
         tags:
             - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.product.create.tab_associations, method: onBlockEvent }
             - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.product.update.tab_associations, method: onBlockEvent }
